@@ -1,0 +1,15 @@
+.list {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding-left: 0;
+  justify-content: start;
+}
+
+.list > li {
+  min-width: 20rem;
+  max-width: 20rem;
+  flex: 1 1;
+}

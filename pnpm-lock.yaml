@@ -27,9 +27,6 @@ devDependencies:
   esbuild:
     specifier: ^0.14.54
     version: 0.14.54
-  postcss:
-    specifier: ^8.4.21
-    version: 8.4.21
   solid-start-node:
     specifier: ^0.2.19
     version: 0.2.19(solid-start@0.2.26)(undici@5.15.1)(vite@4.1.4)

@@ -1,0 +1,49 @@
+.card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid black;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: slategray;
+  color: lightgoldenrodyellow;
+}
+
+.titled-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 75%;
+  margin: 0.4rem 0;
+  border-bottom: 1px dashed lightgoldenrodyellow;
+}
+
+.titled-info div {
+  text-align: start;
+  width: fit-content;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.actions-container div:first-child {
+  margin: 0.5rem 0;
+}
+
+.actions {
+  width: 100%;
+}
+
+.actions button {
+  background: khaki;
+  color: darkslategray;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  margin: 0.3rem auto;
+}

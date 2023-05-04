@@ -1,9 +1,10 @@
 import { Title, useRouteData } from "solid-start";
 import { createServerData$ } from "solid-start/server";
-import Counter from "~/components/Counter";
 import { parse } from "csv-parse";
 import { readFile } from "fs/promises";
 import { Shooting } from "~/types/shooting";
+import { ShootingList } from "~/components/ShootingList";
+import { Suspense } from "solid-js";
 
 export const routeData = () =>
   createServerData$(async () => {
@@ -32,16 +33,16 @@ export default function Home() {
 
   return (
     <main>
-      <Title>Hello World</Title>
-      <h1>Hello world!</h1>
-      <Counter />
+      <Title>Data Tangentially Related to School Shootings</Title>
+      <h1>Data Tangentially Related to School Shootings</h1>
       <p>
-        Visit{" "}
-        <a href="https://start.solidjs.com" target="_blank">
-          start.solidjs.com
-        </a>{" "}
-        to learn how to build SolidStart apps.
+        Have you ever wanted to know facts that are extremely loosely related to
+        school shootings, like the nearest brewery? No? Too bad, it exits now
+        anyway.
       </p>
+      <Suspense fallback={<div>Loading shootings...</div>}>
+        <ShootingList shootings={shootings() ?? []} />
+      </Suspense>
     </main>
   );
 }
